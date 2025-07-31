@@ -19,15 +19,16 @@ if tipoOperacao == 0:
     print("Seu binario é: ", numeroBinario)
 
 elif tipoOperacao == 1:
-    numeroEscolhido = int(
+    numeroEscolhido = str(
         input("digite seu binario para passar para numero: "))
     baseOperacao = len(str(numeroEscolhido))
+    baseOperacao = int(baseOperacao)
+    somaBases = 0
 
-    for i in range(int(len(str(numeroEscolhido)))):
-        if (str(numeroEscolhido)[i] == "1") | (str(numeroEscolhido)[i] == "0"):
-            if str(numeroEscolhido)[i] == "1":
-                somaBases = 0
-                somaBases += pow(2, len(str(numeroEscolhido)[i]))
+    for i in range(baseOperacao):
+        if int(str(numeroEscolhido)[i]) == 1 or int(str(numeroEscolhido)[i]) == 0:
+            if int(str(numeroEscolhido)[i]) == 1:
+                somaBases += 2 ** i
                 print(somaBases)
         else:
             print("acho que seu numero não é um binario")
