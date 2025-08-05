@@ -8,7 +8,7 @@ if tipoOperacao == 0:
     casasBinario.reverse()
     numeroBinario = []
 
-    for i in range(10):
+    for i in range(11):
         if numeroEscolhido >= casasBinario[i]:
             numeroBinario.append(1)
             numeroEscolhido = numeroEscolhido - casasBinario[i]
